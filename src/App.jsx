@@ -19,6 +19,7 @@ function App() {
 	const [quoteRandom, setQuoteRandom] = useState(getElementRandom(quotes))
 	const [colorRandom, setColorRandom] = useState(getElementRandom(colors))
 
+
 	const clickButton = () => {
 		setQuoteRandom(getElementRandom(quotes))
 		setColorRandom(getElementRandom(colors))
@@ -28,14 +29,14 @@ function App() {
 		backgroundColor: colorRandom.hex
 	}
 
-	console.log(quoteRandom)
-	console.log(colorRandom)
 
 	return (
 		<div style={appStyleColor} className="App flex">
-			<Card quoteRandom={quoteRandom}
-			colorRandom={colorRandom}
-			getElementRandom={getElementRandom} />
+			<Card
+				quoteRandom={quoteRandom}
+				colorRandom={colorRandom}
+				clickButton ={clickButton}
+			/>
 		</div>
 	)
 }

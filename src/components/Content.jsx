@@ -1,23 +1,29 @@
 import React from 'react'
 import Button from './Button'
 
-const Content = () => {
+const Content = ({quoteRandom, colorRandom, clickButton}) => {
 
-    
-   
+    console.log(quoteRandom)
+	console.log(colorRandom)
 
-    // const contentStyleColor = {
-    //     backgroundColor: colorRandom.hex
-    // }
+
+
+    const appStyleColor = {
+		color: colorRandom.hex
+	}
 
     return (
         <div className='card__content flex'>
-            <div className="card__detalils">
-                <h2 className='card__title'>Alina Smith</h2>
-                <cite className='card__cite'>I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.</cite>
+            <div style={appStyleColor} className="card__detalils">
+                <h2 className='card__title'>{quoteRandom.author}</h2>
+                <cite className='card__cite'>{quoteRandom.quote}</cite>
 
-                <Button />
+                
             </div>
+            <Button 
+                    colorRandom = {colorRandom}
+                    clickButton = {clickButton}
+                />
         </div>
     )
 }
