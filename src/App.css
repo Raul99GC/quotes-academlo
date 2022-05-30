@@ -1,0 +1,134 @@
+:root{
+  --transition: .5s;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 16px;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+/* Codigo reutilizable */
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.App{
+  width: 100%;
+  min-height: 100vh;
+  
+}
+
+.card{
+  position: relative;
+  width: 45rem;
+  height: 19rem;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0 3.5rem 8rem rgba(0, 0, 0, .15);
+  transition: var(--transition);
+}
+
+.card:hover{
+  height: 55rem;
+}
+
+.card__img-box{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:-5rem;
+  width: 20rem;
+  height: 20rem;
+  transition: var(--transition);
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, .35);
+  overflow: hidden;
+}
+
+.card:hover .card__img-box{
+  width: 30rem;
+  height: 30rem;
+}
+
+.card__img{
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: flex-end;
+}
+
+.card__detalils{
+  padding: 4rem;
+  text-align: center;
+  width: 100%;
+  transition: var(--transition);
+  transform: translateY(23rem);
+}
+
+.card:hover .card__detalils{
+  transform: translateY(0);
+}
+
+.card__title{
+  font-size: 3.37rem;
+  font-weight: 600;
+  line-height: 4rem;
+  padding: 0;
+}
+
+.card__cite{
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.card__btn-content{
+  width: 100%;
+  height: 6rem;
+  margin-top: 3rem;
+}
+
+.card__button{
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  background-color: lightcoral;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 0 #000a;
+}
+
+.card__button:active{
+  box-shadow: 0 0 0 0 #000a;
+}
+
+.clard__i{
+  color: white;
+}
